@@ -17,7 +17,7 @@ Software:
     ./itunes_backup2hashcat.pl Manifest.plist
 * Copy output to a file (or redirect output to a file (>) directly) and run it with hashcat using mode -m 14700 = iTunes Backup < v10.0 or -m 14800 = iTunes Backup v10.x
 
-If the output of itunes_backup2hashcat.pl start with $itunes_backup$\*9\* then you need to use hash mode -m 14700, for $itunes_backup$\*10\* use -m 14800 instead.
+If the output of itunes_backup2hashcat.pl starts with $itunes_backup$\*9\* then you need to use hash mode -m 14700, for $itunes_backup$\*10\* use -m 14800 instead.
 
 # Command line parameters 
 
