@@ -21,7 +21,7 @@ If the output of itunes_backup2hashcat.pl starts with $itunes_backup$\*9\* then 
 
 # Command line parameters 
 
-The usage is very simple: you just specify the path to the 7-Zip file as the first command line argument.   
+The usage is very simple: you just specify the path to the Manifest.plist file as the first command line argument.   
    
 You can also use multiple files on the command line like this:   
   ./itunes_backup2hashcat.pl Manifest.plist Manifest2.plist   
