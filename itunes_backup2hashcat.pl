@@ -241,7 +241,7 @@ sub itunes_plist_get_hash
 
 sub usage
 {
-  print "Usage: $0 <Manifest.plist file>\n";
+  print STDERR "Usage: $0 <Manifest.plist file>...\n";
 }
 
 #
