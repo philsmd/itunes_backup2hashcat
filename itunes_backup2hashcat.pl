@@ -241,7 +241,9 @@ sub itunes_plist_get_hash
 
 sub usage
 {
-  print STDERR "Usage: $0 <Manifest.plist file>...\n";
+  my $program_name = shift;
+
+  print STDERR "Usage: $program_name <Manifest.plist file>...\n";
 }
 
 #
