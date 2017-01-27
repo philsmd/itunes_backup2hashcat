@@ -239,6 +239,11 @@ sub itunes_plist_get_hash
   return $hash;
 }
 
+sub usage
+{
+  print "Usage: $0 <Manifest.plist file>\n";
+}
+
 #
 # Start
 #
