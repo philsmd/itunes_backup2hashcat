@@ -239,6 +239,37 @@ sub itunes_plist_get_hash
   return $hash;
 }
 
+sub globbing_on_windows
+{
+  my @file_list = @_;
+
+  my $os = $^O;
+
+  if (($os eq "MSWin32") || ($os eq "Win32"))
+  {
+    my $windows_globbing_module = "File::Glob";
+    my $windows_globbing = "bsd_glob";
+
+    if (eval "require $windows_globbing_module")
+    {
+      no strict 'refs';
+
+      $windows_globbing_module->import ($windows_globbing);
+
+      my @new_file_list = ();
+
+      foreach my $item (@file_list)
+      {
+        push (@new_file_list, $windows_globbing-> ($item));
+      }
+
+      @file_list = @new_file_list;
+    }
+  }
+
+  return @file_list;
+}
+
 sub usage
 {
   my $program_name = shift;
@@ -257,7 +288,9 @@ if (scalar (@ARGV) lt 1)
   exit (1);
 }
 
-foreach my $file_name (@ARGV)
+my @file_list = globbing_on_windows (@ARGV);
+
+foreach my $file_name (@file_list)
 {
   if (! -e $file_name)
   {
