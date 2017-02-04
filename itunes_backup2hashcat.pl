@@ -5,13 +5,13 @@
 # Date: January 2017
 
 # Version:
-# 0.01
+# 0.02
 
 # Date released:
 # January 2017
 
 # Last updated:
-# 25th January 2017
+# 4th February 2017
 
 # Explanation of the output format:
 # 1. all binary data is outputted in hexadeximal form
